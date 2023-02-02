@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+li {
+    margin-left: 0.5rem;
+}
+
+h1, h2 {
+    font-weight: 1;
+    font-size: 70px;
+}
+
+@font-face {
+    font-family: 'bodoque';
+    src: url('../font/bodoque-webfont.woff2') format('woff2'),
+         url('../font/bodoque-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bodoque {
+    font-family: "bodoque";
+}
+
+.show-up {
+    transition: all 1s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.show-up.inview {
+    opacity: 1;
+    transform: none;
+}
+
+.menu{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul li a{
+    position: relative;
+    display: block;
+    margin: 0.5rem;
+    padding: 0.7rem;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(97, 129, 152);
+    font-weight: 1;
+    background-color: rgba(255, 255, 255, 0.481);
+    border-radius: 5rem;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+}
+
+a#menu-intro{
+    position: absolute;
+    left: 0;
+}
+
+#intro, #about, #projects, #contact {
+    position: relative;
+    background-color: #202721;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#contact {
+    height: 92vh;
+}
+
+.footer {
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.parallax {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: auto;
+    z-index: 0;
+}
+
+.intro-text, .section-title {
+    font-family: "bodoque";
+    position: relative;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(97, 129, 152);
+    font-size: 70px;
+    /* margin-left: 27%; */
+    margin-top: 10%;
+}
+
+#intro::before {
+    content: '';
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #202721, transparent);
+    z-index: 2;
+}
+
+#about, #projects, #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    position: absolute;
+    font-weight: 100;
+    margin-top: 5%;
+    top: 0%;
+    text-shadow: 2px 2px 7px white;
+}
+
+.paragraph-style{
+    margin-top: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow:  1px 1px 5px rgba(255, 255, 255, 0.5);
+    margin-inline: 10%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+.about-skills-image {
+    filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.5));
+    transition: transform 0.8s ease-in;
+}
+
+.about-skills-image:hover {
+    transform: rotateY(360deg); 
+}
+
+.landing-page, .head-or-tails, .nindoo-rpg, .myorho {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    /* background-color: rgb(81, 78, 78); */
+}
+
+.nindoo-rpg, .head-or-tails, .myorho {
+    display: none;
+}
+
+.project-info-content{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-inline: 5%;
+}
+
+.project-title {
+    text-shadow:  1px 1px 5px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 50px;
+    margin-top: 11%;
+    color: white;
+}
+
+.project-bt {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    cursor: pointer;
+    border: transparent;
+    font-size: 50px;
+    color: rgb(242, 242, 242);
+    text-shadow:  1px 1px 5px rgba(255, 255, 255, 0.5);
+}
+
+.prev-bt {
+    animation: prev 1s infinite;
+}
+
+.next-bt {
+    animation: next 1s infinite;
+}
+
+.project-info {
+    margin-top: 5%;
+}
+
+.project-image img {
+    display: flex;
+    align-items: center;
+    margin-top: 30%;
+    width: 60%;
+    animation: float 1s infinite;
+    filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.5));
+}
+
+.nindoo-rpg .project-info-content {
+    width: 65%;
+}
+
+.nindoo-rpg .project-image {
+    margin-top: 2%;
+}
+
+.myorho .project-image img {
+    margin-left: -10%;
+}
+
+a {
+    color: rgb(56, 206, 226);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-logo {
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+.linkedin img, .github img {
+    margin-top: 20%;
+    width: 35%;
+    filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.5));
+    animation: float 1s infinite;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0rem);
+    }
+    40%{
+        transform: translateY(0.6rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes prev {
+    0%{
+        transform: translateX(0rem);
+    }
+    40%{
+        transform: translateX(-0.6rem);
+    }
+    100%{
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes next {
+    0%{
+        transform: translateX(0rem);
+    }
+    40%{
+        transform: translateX(0.6rem);
+    }
+    100%{
+        transform: translateX(0rem);
+    }
+}

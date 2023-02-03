@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -45,7 +45,7 @@ h1, h2 {
     transform: none;
 }
 
-.menu{
+.menu {
     position: fixed;
     z-index: 3;
     top: 0;
@@ -63,21 +63,75 @@ h1, h2 {
 .menu ul li a{
     position: relative;
     display: block;
-    margin: 0.5rem;
+    margin-top: 0.5rem;
     padding: 0.7rem;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     color: white;
     text-shadow: 2px 2px 5px rgb(97, 129, 152);
     font-weight: 1;
-    background-color: rgba(255, 255, 255, 0.481);
-    border-radius: 5rem;
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
 }
 
 a#menu-intro{
     position: absolute;
     left: 0;
+    font-size: 34px;
+    margin: 0.5rem;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
+
+.main-menu a {
+    border-bottom-left-radius: 1.6rem;
+    border-top-left-radius: 1rem;
+    text-align: left;
+    width: 7rem;
+    left: 6rem;
+    transition: all 0.5s;
+}
+
+.main-menu-bg-color {
+    background: linear-gradient(to top, #ffffff, transparent);
+}
+
+.main-menu a.about:hover::after {
+    content: ' about';
+    animation: 1s main-menu-hover forwards;
+}
+
+.main-menu a.about:hover {
+    transform: translateX(-4rem);
+}
+
+.main-menu a.projects:hover::after {
+    content: ' projects';
+    animation: 1s main-menu-hover forwards;
+}
+
+.main-menu a.projects:hover {
+    transform: translateX(-6rem);
+}
+
+.main-menu a.contact:hover::after {
+    content: ' contact';
+    animation: 1s main-menu-hover forwards;
+}
+
+.main-menu a.contact:hover {
+    transform: translateX(-5rem);
+}
+
+.main-menu a.secrets {
+    cursor: pointer;
+}
+
+.main-menu a.secrets:hover::after {
+    content: ' secrets';
+    animation: 1s main-menu-hover forwards;
+}
+
+.main-menu a.secrets:hover {
+    transform: translateX(-5rem);
 }
 
 #intro, #about, #projects, #contact {
@@ -88,14 +142,56 @@ a#menu-intro{
     z-index: 1;
 }
 
+#about, #projects, #contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro::before {
+    content: '';
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #202721, transparent);
+    z-index: 2;
+}
+
+#projects {
+    background-color: #2b312c;
+}
+
+#projects::after, #projects::before {
+    content: '';
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    bottom: 0px;
+    background-image: url("../img/in-between.svg");
+    background-size: contain;
+    z-index: 2;
+    filter: drop-shadow(-3px -3px 2px rgba(0, 0, 0, 0.7));
+}
+
+#projects::before {
+    transform: rotateZ(180deg);
+    top: 0px;
+    filter: drop-shadow(3px -3px 2px rgba(0, 0, 0, 0.7));
+}
+
 #contact {
     height: 92vh;
 }
 
-.footer {
-    height: 8vh;
+#contact::after {
+    content: '';
     width: 100%;
-    background-color: rgb(19, 19, 19);
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(19, 19, 19), transparent);
+    z-index: 2;
 }
 
 section {
@@ -124,22 +220,6 @@ section {
     font-size: 70px;
     /* margin-left: 27%; */
     margin-top: 10%;
-}
-
-#intro::before {
-    content: '';
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to top, #202721, transparent);
-    z-index: 2;
-}
-
-#about, #projects, #contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .section-title {
@@ -256,6 +336,41 @@ a {
     width: 35%;
     filter: drop-shadow(1px 1px 5px rgba(255, 255, 255, 0.5));
     animation: float 1s infinite;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+}
+
+.footer-left, .footer-right {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.footer-left {
+    position: absolute;
+    left:4%;
+    font-size: 14px;
+}
+
+.footer-right {
+    position: absolute;
+    right: 5%;
+    font-size: 18px;
+}
+
+@keyframes main-menu-hover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes float {

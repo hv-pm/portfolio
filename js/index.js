@@ -23,6 +23,10 @@ const nindooRpgNextBt = document.getElementById('nindoo-rpg-next');
 const myorho = document.getElementById('myorho');
 const myorhoPrevBt = document.getElementById('myorho-prev');
 const myorhoNextBt = document.getElementById('myorho-next');
+const intro = document.getElementById('intro');
+const about = document.getElementById('about');
+const menuIntroTxt = document.getElementById('menu-intro');
+const mainMenuColor = document.querySelectorAll('.main-menu-bg-color');
 
 
 window.addEventListener("scroll", function() {
@@ -48,6 +52,48 @@ const io = new IntersectionObserver(displaying);
 for (let i = 0; i < items.length; i++) {
     io.observe(items[i]);
 }
+
+
+const optionsBlack = {
+    rootMargin: '0px',
+    threshold: 0.25,
+  };
+
+const menuIntroBlack = function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            menuIntroTxt.style.color = '#3B5656';
+            menuIntroTxt.style.transition = 'color 0.3s';
+            for (let i = 0; i <  mainMenuColor.length; i++) {
+                mainMenuColor[i].style.background = 'linear-gradient(to top, #3B5656, transparent)';
+            }
+        }
+    });
+}
+
+const io2 = new IntersectionObserver(menuIntroBlack, optionsBlack);
+io2.observe(intro);
+
+
+const optionsWhite = {
+    rootMargin: '0px',
+    threshold: 0.75,
+  };
+
+const menuIntroWhite = function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            menuIntroTxt.style.color = 'white';
+            menuIntroTxt.style.transition = 'color 0.3s';
+            for (let i = 0; i <  mainMenuColor.length; i++) {
+                mainMenuColor[i].style.background = 'linear-gradient(to top, #ffffff, transparent)';
+            }
+        }
+    });
+}
+
+const io3 = new IntersectionObserver(menuIntroWhite, optionsWhite);
+io3.observe(about);
 
 
 landingPagePrevBt.addEventListener("click", () => {

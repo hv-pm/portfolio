@@ -12,29 +12,29 @@
     <div class="menu">
         <nav>
             <ul onclick="getElementById('close-menu').checked = false;">
-                <li><a id="menu-intro" href="#intro">/-/v</a></li>
+                <li><a id="menu-home" href="#home">/-/v</a></li>
                 <div class="main-menu">
                     <li><a class="about main-menu-bg-color" href="#about">👨🏻‍🦲</a></li>
                     <li><a class="projects main-menu-bg-color" href="#projects">🦾</a></li>
                     <li><a class="contact main-menu-bg-color" href="#contact">📧</a></li>
-                    <li><a class="secrets main-menu-bg-color" id="secrets">👁‍🗨</a></li>
+                    <!-- <li><a class="secrets main-menu-bg-color" id="secrets">🔍</a></li> -->
                 </div>
             </ul>
         </nav> 
     </div>
     <div class="main">
-        <div id="intro">
+        <div id="home">
             <section>
-                <div class="intro-parallax">
-                    <img class="parallax" id="sky-parallax" src="img/sky_parallax.png" alt="">
-                    <div id="intro-text" class="intro-text">newJourney.begin()</div>
-                    <img class="parallax" id="mountain-far-parallax" src="img/mountain_far_parallax.png" alt="">
-                    <img class="parallax" id="mountain-between-parallax" src="img/mountain_between_parallax.png" alt="">
-                    <img class="parallax" id="mountain-close-parallax" src="img/mountain_close_parallax.png" alt="">
-                    <img class="parallax" id="trees-parallax" src="img/trees_parallax.png" alt="">
-                    <img class="parallax" id="land-parallax" src="img/land_parallax.png" alt="">
-                    <img class="parallax" id="character-parallax" src="img/character_parallax.png" alt="">
-                    <img class="parallax" id="bush-parallax" src="img/bush_parallax.png" alt="">
+                <div class="home-parallax">
+                    <img class="parallax mobile-parallax" id="sky-parallax" src="img/sky_parallax.png" alt="">
+                    <div id="home-text" class="home-text">newJourney.begin()</div>
+                    <img class="parallax mobile-parallax" id="mountain-far-parallax" src="img/mountain_far_parallax.png" alt="">
+                    <img class="parallax mobile-parallax" id="mountain-between-parallax" src="img/mountain_between_parallax.png" alt="">
+                    <img class="parallax mobile-parallax" id="mountain-close-parallax" src="img/mountain_close_parallax.png" alt="">
+                    <img class="parallax mobile-parallax" id="trees-parallax" src="img/trees_parallax.png" alt="">
+                    <img class="parallax mobile-parallax" id="land-parallax" src="img/land_parallax.png" alt="">
+                    <img class="parallax mobile-parallax" id="character-parallax" src="img/character_parallax.png" alt="">
+                    <img class="parallax mobile-parallax" id="bush-parallax" src="img/bush_parallax.png" alt="">
                 </div>    
             </section>
         </div>
@@ -42,11 +42,25 @@
             <section>
                 <div id="section-title" class="section-title show-up"><h1>me.about()</h1></div>
                 <div class="paragraph-style show-up">
-                    <p>    Meu nome é Hygor Vinícius, sou Eng. de Controle e Automação e possuo mestrado em Eng. Biomédica pelo Programa de Pós-graduação em Eng. Biomédica (PPGEB) da Universidade Tecnológica Federal do Paraná (UTFPR - Curitiba). Possuo um projeto <i>Open-Source</i> de uma órtese robótica para mão controlada por sinais eletromiográficos ao qual forneço suporte continuado: MYoRHO - uma tecnologia assistiva que auxilia pessoas com lesões e doenças neuromusculares em suas atividades de vida diária. Devido minha área de graduação e pós-graduação, tenho grande experiência com sistemas microcontrolados e embarcados.</p><br>
+                    <!-- <p>    Meu nome é Hygor Vinícius, sou Eng. de Controle e Automação e possuo mestrado em Eng. Biomédica pelo Programa de Pós-graduação em Eng. Biomédica (PPGEB) da Universidade Tecnológica Federal do Paraná (UTFPR - Curitiba). Possuo um projeto <i>Open-Source</i> de uma órtese robótica para mão controlada por sinais eletromiográficos ao qual forneço suporte continuado: MYoRHO - uma tecnologia assistiva que auxilia pessoas com lesões e doenças neuromusculares em suas atividades de vida diária. Devido minha área de graduação e pós-graduação, tenho grande experiência com sistemas microcontrolados e embarcados.</p><br>
                     <p>    O primeiro contato que tive com programação foi em meados de 2009, no <i>RPG Maker XP</i>. No programa era possível construir blocos de comportamento de um personagem através da interface, mas havia a possibilidade de programar usando a <i>Ruby Game Scripting System</i>, baseada na linguagem <i>Ruby</i>. Desde então, todo contato que tenho com qualquer forma de programação fico entusiasmado para tentar colocar minhas ideias em prática e testar até onde consigo ir utilizando tal linguagem.</p><br>
                     <p>    Visto as oportunidades de trabalho emergentes na área de <i>web development</i>, decidi migrar da área acadêmica e me tornar um desenvolvedor <i>Full Stack</i>. Ser um desenvolvedor junior me garante o privilégio de ter muitas ferramentas a explorar, e até agora essa nova jornada tem me divertido bastante.</p><br>
+                    <p><h3>Habilidades adquiridas:</h3></p><br> -->
+                    <div class="textarea-wrapper">
+                        <div class="textarea-before"></div>
+                            <div class="textarea-inner-wrapper">
+                            <textarea class="paragraph-style textarea-style" name="about-txt" id="about-txt" cols="30" rows="5" readonly>
+Meu nome é Hygor Vinícius, sou Eng. de Controle e Automação e possuo mestrado em Eng. Biomédica pelo Programa de Pós-graduação em Eng. Biomédica (PPGEB) da Universidade Tecnológica Federal do Paraná (UTFPR - Curitiba). Possuo um projeto Open Source de uma órtese robótica para mão controlada por sinais eletromiográficos ao qual forneço suporte continuado: MYoRHO - uma tecnologia assistiva que auxilia pessoas com lesões e doenças neuromusculares em suas atividades de vida diária. Devido minha área de graduação e pós-graduação, tenho grande experiência com sistemas microcontrolados e embarcados.
+
+O primeiro contato que tive com programação foi em meados de 2009, no RPG Maker XP. No programa era possível construir blocos de comportamento de um personagem através da interface, mas havia a possibilidade de programar usando a Ruby Game Scripting System, baseada na linguagem Ruby. Desde então, todo contato que tenho com qualquer forma de programação fico entusiasmado para tentar colocar minhas ideias em prática e testar até onde consigo ir utilizando tal linguagem.
+
+Visto as oportunidades de trabalho emergentes na área de web development, decidi migrar da área acadêmica e me tornar um desenvolvedor Full Stack. Ser um desenvolvedor junior me garante o privilégio de ter muitas ferramentas a explorar, e até agora essa nova jornada tem me divertido bastante.
+        </textarea>
+                            <div class="textarea-after"></div>
+                        </div>
+                    </div>
                     <p><h3>Habilidades adquiridas:</h3></p><br>
-                    <div>
+                    <div class="skills">
                         <img class="about-skills-image" height="40" width="50" title="Arduino" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original.svg">
                         <img class="about-skills-image" height="40" width="50" title="MATLAB" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matlab/matlab-original.svg">
                         <img class="about-skills-image" height="40" width="50" title="C++" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg">

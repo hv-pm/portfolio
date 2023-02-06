@@ -9,7 +9,7 @@ const trees = document.getElementById('trees-parallax');
 const land = document.getElementById('land-parallax');
 const character = document.getElementById('character-parallax');
 const bush = document.getElementById('bush-parallax');
-const introText = document.getElementById('intro-text');
+const homeText = document.getElementById('home-text');
 const items = document.querySelectorAll('.show-up');
 const landingPage = document.getElementById('landing-page');
 const landingPagePrevBt = document.getElementById('landing-page-prev');
@@ -23,9 +23,9 @@ const nindooRpgNextBt = document.getElementById('nindoo-rpg-next');
 const myorho = document.getElementById('myorho');
 const myorhoPrevBt = document.getElementById('myorho-prev');
 const myorhoNextBt = document.getElementById('myorho-next');
-const intro = document.getElementById('intro');
+const home = document.getElementById('home');
 const about = document.getElementById('about');
-const menuIntroTxt = document.getElementById('menu-intro');
+const menuIntroTxt = document.getElementById('menu-home');
 const mainMenuColor = document.querySelectorAll('.main-menu-bg-color');
 
 
@@ -35,7 +35,7 @@ window.addEventListener("scroll", function() {
     mountainBetween.style.top = value * 0.15 + 'px';
     mountainClose.style.top = value * 0.19 + 'px';
     trees.style.top = value * 0.3 + 'px';
-    introText.style.top = value * 0.8 + 'px';
+    homeText.style.top = value * 0.8 + 'px';
 })
 
 const displaying = function(entries) {
@@ -72,7 +72,7 @@ const menuIntroBlack = function(entries) {
 }
 
 const io2 = new IntersectionObserver(menuIntroBlack, optionsBlack);
-io2.observe(intro);
+io2.observe(home);
 
 
 const optionsWhite = {

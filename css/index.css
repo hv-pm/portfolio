@@ -45,7 +45,66 @@ h1, h2 {
     transform: none;
 }
 
-.menu {
+.main-menu-mobile {
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    background-color: white;
+    z-index: 5;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.main-menu-mobile li a {
+    color: #202721;
+    font-size: 2rem;
+    font-weight: 1;
+    line-height: 10vh;
+}
+
+#close-menu{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    line-height: 3.5vh;
+    margin-top: 1.7rem;
+    margin-right: 2.7rem;
+    font-size: 2rem;
+}
+
+a#simplified-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #202721, transparent);
+    border-radius: 1rem;
+    z-index: 5;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer; 
+}
+
+.menu-mobile ul {
+    list-style: none;
+}
+
+.menu-mobile li {
+    margin-left: 0;
+}
+
+.menu-mobile, .menu {
     position: fixed;
     z-index: 3;
     top: 0;
@@ -218,6 +277,10 @@ section {
     text-shadow: 2px 2px 5px rgb(97, 129, 152);
     font-size: 5.2vw;
     margin-top: 10%;
+}
+
+.home-text {
+    margin-top: 16vh;
 }
 
 .textarea-wrapper {
@@ -451,31 +514,6 @@ a {
     }
 }
 
-@media (max-width: 870px) {
-
-    .footer-left {
-        font-size: 1.5vw;
-    }
-    
-    .footer-right {
-        font-size: 2vw;
-    }
-}
-
-@media (max-width: 800px) {
-    h1, h2 {
-        font-size: 8vw;
-    }
-    
-    .section-title {
-        font-size: 8vw;
-    }
-
-    .paragraph-style {
-        font-size: 1.7vw;
-    }
-}
-
 @media (max-height: 420px) {
     .textarea-style {
         height: 48.5vh;
@@ -486,7 +524,139 @@ a {
     }
 }
 
-@media (orientation: portrait) {
+@media (max-width: 980px) {
+    .home-text {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 870px) {
+    .footer-left {
+        font-size: 1.5vw;
+    }
+    .footer-right {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 800px) {
+    #home {
+        overflow: hidden;
+    }
+    .mobile-parallax {
+        width: max-content;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    h1, h2 {
+        font-size: 8vw;
+    }
+    .section-title {
+        font-size: 8vw;
+    }
+    .paragraph-style {
+        font-size: 1.7vw;
+    }
+    .main-menu a.about, .main-menu a.projects, .main-menu a.contact {
+        display: none;
+    }
+    a#simplified-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 499px) and (max-width: 600px){
+    #home {
+        overflow: hidden;
+    }
+    .mobile-parallax {
+        width: max-content;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .home-text {
+        font-size: 9vw;
+    }
+    h1, h2, .section-title {
+        font-size: 50px;
+    }
+    .section-title {
+        margin-top: 13vh;
+    }
+    .textarea-wrapper {
+        margin-top: 18%;
+    }
+    .paragraph-style {
+        font-size: 2.4vw;
+        margin-top: 0%;
+    }
+    .textarea-style {
+        height: 45vh;
+    }
+    .skills {
+        width: 70%;
+        margin-left: 15%;
+    }
+    .project-title {
+        font-size: 6.9vw;
+        margin-top: 8vh;
+    }
+    .project-bt {
+        font-size: 30px;
+    }
+    .project-info-content {
+        margin-top: 8%;
+    }
+    .project-image img {
+        width: 30vw;
+        margin-left: 0vw;
+        margin-top: 4vh;
+    }
+    .myorho .project-image img {
+        width: 25vw;
+        margin-left: 0vw;
+        margin-top: 0vh;
+    }
+    .nindoo-rpg .project-image img {
+        width: 12vw;
+        margin-left: 7vw;
+        margin-top: 1vh;
+    }
+    .landing-page, .head-or-tails, .nindoo-rpg, .myorho {
+        display: flex;
+        flex-direction: column;
+    }
+    .head-or-tails, .nindoo-rpg, .myorho {
+        display: none;
+    }
+    .textarea-before {
+        height: 2%;
+    }
+    #landing-page, #head-or-tails, #nindoo-rpg, #myorho {
+        margin-top: 30%;
+    }
+    #contact section {
+        display: block;
+    }
+    .linkedin img, .github img {
+        margin-top: 10vh;
+        width: 20vw;
+    }
+    .footer-left {
+        font-size: 2vw;
+    }
+    .footer-right {
+        font-size: 3vw;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 499px) {
+    a#simplified-menu {
+        margin-top: 1.5rem;
+    }
+    #close-menu{
+        margin-right: 1.7rem;
+    }
     #home {
         overflow: hidden;
     }
@@ -549,5 +719,11 @@ a {
     }
     #contact section {
         display: block;
+    }
+    .footer-left {
+        font-size: 2vw;
+    }
+    .footer-right {
+        font-size: 3vw;
     }
 }

@@ -514,16 +514,6 @@ a {
     }
 }
 
-@media (max-height: 420px) {
-    .textarea-style {
-        height: 48.5vh;
-    }
-    .textarea-after {
-        position: absolute;
-        height: 6%;
-    }
-}
-
 @media (max-width: 980px) {
     .home-text {
         font-size: 54px;
@@ -725,5 +715,55 @@ a {
     }
     .footer-right {
         font-size: 3vw;
+    }
+}
+
+@media (max-height: 580px) {
+    .textarea-style {
+        height: 48.5vh;
+    }
+    .textarea-after {
+        position: absolute;
+        height: 6%;
+    }
+    .section-title {
+        margin-top: 5vh;
+    }
+    .paragraph-style {
+        font-size: 2vh;
+    }
+    .project-info-content {
+        margin-top: 0vh;
+    }
+    .about-skills-image {
+        width: 7vh;
+        height: 7vh;
+    }
+    .project-image img {
+        width: 19vh;
+        margin-left: 5vw;
+        margin-top: 2vh;
+    }
+    .nindoo-rpg .project-image img {
+        width: 8vw;
+        margin-left: 9vw;
+        margin-top: 1vh;
+    }
+    .myorho .project-image img {
+        width: 14vh;
+        margin-left: 7vw;
+    }
+    .linkedin img, .github img {
+        width: 14vh;
+    }
+}
+
+@media (max-height: 420px) {
+    .textarea-style {
+        height: 48.5vh;
+    }
+    .textarea-after {
+        position: absolute;
+        height: 6%;
     }
 }

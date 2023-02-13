@@ -27,7 +27,10 @@ const home = document.getElementById('home');
 const about = document.getElementById('about');
 const menuIntroTxt = document.getElementById('menu-home');
 const mainMenuColor = document.querySelectorAll('.main-menu-bg-color');
-
+const mobileMenu = document.getElementById('main-menu-mobile');
+const mobileMenuOpen = document.getElementById('simplified-menu');
+const mobileMenuClose = document.querySelectorAll('.mobile-menu-close');
+const mobileMenuColor = document.getElementById('simplified-menu');
 
 window.addEventListener("scroll", function() {
     var value = window.scrollY;
@@ -53,7 +56,6 @@ for (let i = 0; i < items.length; i++) {
     io.observe(items[i]);
 }
 
-
 const optionsBlack = {
     rootMargin: '0px',
     threshold: 0.25,
@@ -64,6 +66,7 @@ const menuIntroBlack = function(entries) {
         if (entry.isIntersecting) {
             menuIntroTxt.style.color = '#3B5656';
             menuIntroTxt.style.transition = 'color 0.3s';
+            mobileMenuColor.style.background = 'linear-gradient(to top, #3B5656, transparent)';
             for (let i = 0; i <  mainMenuColor.length; i++) {
                 mainMenuColor[i].style.background = 'linear-gradient(to top, #3B5656, transparent)';
             }
@@ -85,6 +88,7 @@ const menuIntroWhite = function(entries) {
         if (entry.isIntersecting) {
             menuIntroTxt.style.color = 'white';
             menuIntroTxt.style.transition = 'color 0.3s';
+            mobileMenuColor.style.background = 'linear-gradient(to top, #ffffff, transparent)';
             for (let i = 0; i <  mainMenuColor.length; i++) {
                 mainMenuColor[i].style.background = 'linear-gradient(to top, #ffffff, transparent)';
             }
@@ -95,6 +99,16 @@ const menuIntroWhite = function(entries) {
 const io3 = new IntersectionObserver(menuIntroWhite, optionsWhite);
 io3.observe(about);
 
+mobileMenuOpen.addEventListener("click", () => {
+    mobileMenu.style.display = 'flex';
+})
+
+let clickClose = () => {
+    mobileMenu.style.display = 'none';
+}
+mobileMenuClose.forEach((item) => {
+    item.addEventListener('click', clickClose)
+});
 
 landingPagePrevBt.addEventListener("click", () => {
     landingPage.style.display = 'none';

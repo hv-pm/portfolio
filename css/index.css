@@ -718,7 +718,7 @@ a {
     }
 }
 
-@media (max-height: 580px) {
+@media (max-height: 580px) and (max-width: 600px) {
     .textarea-style {
         height: 48.5vh;
     }

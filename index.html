@@ -11,7 +11,7 @@
 <body>
     <div class="menu">
         <nav>
-            <ul onclick="getElementById('close-menu').checked = false;">
+            <ul>
                 <li><a id="menu-home" href="#home">/-/v</a></li>
                 <div class="main-menu">
                     <li><a class="about main-menu-bg-color" href="#about">👨🏻‍🦲</a></li>
@@ -22,12 +22,27 @@
             </ul>
         </nav> 
     </div>
+    <div class="menu-mobile">
+        <nav>
+            <ul>
+                <li><a id="simplified-menu">≡</a></li>
+                <div id="main-menu-mobile" class="main-menu-mobile">
+                    <li><a id="close-menu" class="mobile-menu-close">X</a></li>
+                    <li><a id="home-mobile" class="mobile-menu-close" href="#home">/-/v</a></li>
+                    <li><a id="about-mobile" class="mobile-menu-close" href="#about">about</a></li>
+                    <li><a id="project-mobile" class="mobile-menu-close" href="#projects">projects</a></li>
+                    <li><a id="contact-mobile" class="mobile-menu-close" href="#contact">contact</a></li>
+                    <!-- <li><a class="secrets main-menu-bg-color" id="secrets">🔍 secrets</a></li> -->
+                </div>
+            </ul>
+        </nav> 
+    </div>
     <div class="main">
         <div id="home">
             <section>
                 <div class="home-parallax">
                     <img class="parallax mobile-parallax" id="sky-parallax" src="img/sky_parallax.png" alt="">
-                    <div id="home-text" class="home-text">newJourney.begin()</div>
+                    <div id="home-text" class="home-text">journey.begin()</div>
                     <img class="parallax mobile-parallax" id="mountain-far-parallax" src="img/mountain_far_parallax.png" alt="">
                     <img class="parallax mobile-parallax" id="mountain-between-parallax" src="img/mountain_between_parallax.png" alt="">
                     <img class="parallax mobile-parallax" id="mountain-close-parallax" src="img/mountain_close_parallax.png" alt="">
